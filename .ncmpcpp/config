@@ -1,0 +1,137 @@
+### Directories ###
+ncmpcpp_directory = ~/.ncmpcpp
+lyrics_directory  = ~/.lyrics
+mpd_music_dir     = ~/Musicas
+
+### Behaviour ###
+message_delay_time = 1
+autocenter_mode = "yes"
+centered_cursor = "yes"
+ignore_leading_the = "no"
+allow_for_physical_item_deletion = "no"
+
+### Integration with external programs ###
+external_editor = "vim"
+use_console_editor = yes
+mouse_support = "yes"
+mouse_list_scroll_whole_page = "no"
+lines_scrolled = "1"
+
+### Appearance( or at least some part of it ) ###
+# user_interface = "classic"
+user_interface = "alternative"
+# alternative_ui_separator_color = "magenta" # it's some bar on top separating the songs from status data
+colors_enabled = "yes"
+# from the docs: One of the colors used in Song info, Tiny tag editor and Search engine
+color1 = "magenta"
+# from the docs: One of the colors used in Song info, Tiny tag editor and Search engine
+color2 = "green"
+# Columns color #
+# this is basically the color that they use to color columns and some of the text
+main_window_color = "red"
+# main_window_highlight_color = "green" # deprecated, use the two below
+current_item_prefix = "$(red)$r"
+current_item_suffix = "$/r$(green)"
+# state_line_color = "blue"
+# state_flags_color = "green" #this seems to change color of volume displayer
+
+### Window ###
+song_window_title_format = "{%a - }{%t}|{%f}"
+statusbar_visibility = "yes"
+header_visibility = "no"
+titles_visibility = "no"
+
+### Progress bar ###
+#progressbar_look = "⠒⠒⠐"
+# progressbar_look = "•••"
+#progressbar_look = "---"
+# progressbar_look = "▀▀ "
+# progressbar_look = "╼·"
+# progressbar_look = "━━━"
+progressbar_look = "━━─"
+#progressbar_look = "◾◾◽"
+# progressbar_look = "─╼─"
+progressbar_color = "black"
+progressbar_elapsed_color = "default" #this basically sets it to the foreground color
+
+### Song status ###
+# this is the info you're shown as whether the song is playing, 
+# which song is playing, etc etc.
+#now_playing_prefix = "$b"
+#now_playing_suffix = "$/b"
+# song_status_format = "$b$6%t$/b {$0by} $b$2%a$8$/b"
+song_status_format = " {$b$6%a $b$0- $b$3%t}|{$b%f}"
+# song_status_format = "$8%t $9• $2%a $9•{ $5%b $9• }$7%y$9"
+### Song status for the alternative status display
+# alternative_header_first_line_format = "$b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b"
+alternative_header_first_line_format = "$b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b"
+
+### Pop-up menu ###
+# when adding songs to playlists for example, you're shown a pop up. 
+# these are their color settings
+# active_column_color = yellow
+# window_border_color = green
+# active_window_border = yellow
+
+###################
+### Screen 1
+###################
+# Song columns format #
+# This is basically the first screen (1)
+# song_columns_list_format = "$L(9)[white]{l} (20)[red]{a} (30)[green]{b}$R(20)[cyan]{t}"
+# song_columns_list_format = "(25)[white]{a} (25)[blue]{brE} (47)[white]{t|f} (6f)[blue]{l}"
+# song_columns_list_format = "(15)[yellow]{lr} (1)[black]{} (40)[red]{a} (40)[green]{t}"
+# song_columns_list_format = "(40)[magenta]{ar} (40)[green]{t}" # this one is like the one below, but not quite centered
+song_columns_list_format = "(50)[magenta]{ar} (50)[green]{t}"
+playlist_display_mode = "columns" #possible values: columns/classic
+
+###################
+### Screen 2
+###################
+# Song list #
+# basically, by default this is screen number 2 (just press 2 on your keyboard)
+# song_list_format = "{$8%a ⠂ }{%t}$R{%l}"
+song_list_format = "{{$6%a $3}{%t}}|{%f} $R$5%b $5%l"
+
+###################
+### Screen 3
+###################
+# Search engine
+search_engine_display_mode = "classic" # this only shows in the songs found
+
+###################
+### Screen 4
+###################
+# Song library #
+# this is basically shown if you press two times on the 4th screen
+# I'd like that one to be displayed by default but don't yet know how to do it
+song_library_format = "{{$b$6%a} {$3%t}}|{$b$5%f}"
+
+###################
+### Screen 5
+###################
+# Playlist 
+# options: classic/columns
+playlist_editor_display_mode = "classic"
+
+###################
+### Screen 6
+###################
+# Tag editor
+# Currently there's nothing configured for it
+
+###################
+### Screen 7
+###################
+# there's a menu on screen 7, but you can't really configure it much
+
+###################
+### Screen 8
+###################
+### Visualizer ###  
+visualizer_fifo_path = /tmp/mpd.fifo
+visualizer_output_name = "mpd_visualizer"
+visualizer_in_stereo = "yes"
+visualizer_sync_interval = 30
+
+###############################################################################

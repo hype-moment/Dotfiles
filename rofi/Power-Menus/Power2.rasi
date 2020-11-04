@@ -1,0 +1,73 @@
+configuration {
+    font: "iosevka 85";
+    modi: "window,run,drun";
+    theme: "clean";
+    show-icons: true;
+   
+}
+
+
+
+* {
+    selected-background: rgba(220, 220, 220, 0.1);
+    selected-foreground: #F12345;
+}
+
+#window {
+    width: 100%;
+    height: 30%;
+    background-color: rgba(220, 220, 220, 0.1);
+    padding: 5px;
+}
+
+#mainbox {
+    border:  0;
+    padding: 0;
+    children: [listview];
+    background-color: rgba(220, 220, 220, 0.1);
+}
+
+#listview {
+    columns: 1;
+    padding: 3px 3px 0px 20px;
+    layout: horizontal;
+    background-color: transparent;
+}
+
+element {
+    margin: 20px;
+    padding: -10px 90px 0px 90px;
+    border-radius: 5px;
+    orientation: vertical;
+}
+
+#element.normal.normal {
+    background-color: rgba(0, 0, 0, 0);
+    text-color:       #ffffffaa;
+}
+
+#element.selected.normal {
+    background-color: @selected-background;
+    text-color:       #F12345;
+    border-color: #d07ef2;
+}
+
+#element.alternate.normal {
+    background-color: rgba(0,0,0,0);
+    text-color:       #ffffffaa;
+}
+
+#mode-switcher {
+    border:       0px 0px 0px ;
+    border-color: #F12345;
+}
+
+#button {
+    spacing:    0;
+    text-color: #ffffffaa;
+}
+
+#button.selected {
+    background-color: #ffffffaa;
+    text-color:       #ffffff;
+}

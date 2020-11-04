@@ -1,0 +1,122 @@
+configuration {
+    theme: "Light";
+    show-icons: true;
+    font: "Hack 11";
+}
+
+@import "colors.rasi"
+
+#window {
+    width: 80%;
+    height: 80%;
+    background-color: rgba(245, 245, 245, 0.9);
+    padding: 50px 50px;
+}
+
+#mainbox {
+    border:  0;
+    border-radius: 4;
+    padding: 20;
+    background-color: rgba(245, 245, 245, 0.1);
+}
+
+#textbox {
+    text-color: @foreground;
+}
+
+#listview {
+    padding: 20px;
+    columns: 8;
+    spacing: 4px;
+    cycle: false;
+    dynamic: true;
+    layout: vertical;
+    background-color: transparent;
+}
+
+element {
+    margin: 11px;
+    padding: 14px;
+    border-radius: 5px;
+    orientation: vertical;
+}
+
+element-icon {
+    size: 80px;
+    margin: 0 10px 0 0;
+}
+
+element-text {
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+}
+
+#element.normal.normal {
+    background-color: transparent;
+    text-color:       @foreground;
+}
+
+#element.selected.normal {
+    background-color: rgba(245, 0, 245, 0.3);
+    text-color:       @selected-foreground;
+    border-color: #FFFFFF;
+}
+
+#element.alternate.normal {
+    background-color: transparent;
+    text-color:       @foreground;
+}
+
+#mode-switcher {
+    border:       0px 0px 0px ;
+    border-color: @separatorcolor;
+}
+
+#button {
+    spacing:    0;
+    text-color: @foreground;
+}
+
+#button.selected {
+    background-color: @selected-background;
+    text-color:       @selected-foreground;
+}
+
+#inputbar {
+    spacing: 0;
+    text-color: @selected-foreground;
+    padding: 10px;
+    background-color: @selected-background;
+    /*rgba(245, 245, 245, 0.3);*/
+    border-radius: 10px;
+}
+
+#case-indicator {
+    spacing:    0;
+    text-color: @selected-foreground;
+    background-color: rgba(245, 245, 245, 0.3);
+}
+
+#entry {
+    spacing:    0;
+    text-color: @selected-foreground;
+    background-color: rgba(245, 245, 245, 0.3);
+}
+
+#prompt {
+    spacing:    0;
+    text-color: @selected-foreground;
+    background-color: rgba(245, 245, 245, 0.3);
+}
+
+#textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @selected-foreground;
+    background-color: rgba(245, 245, 245, 0.3);
+}
+
+#inputbar {
+    children: [prompt,textbox-prompt-colon,entry,case-indicator];
+}

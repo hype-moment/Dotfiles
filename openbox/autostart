@@ -1,0 +1,21 @@
+
+Lanucher_Tint2(){
+
+Tint=$(cat .gtkrc-2.0 | grep gtk-theme-name | sed 's/.*="//g;s/"//g')
+
+if [[ $Tint = Midnight ]]; then
+	tint2 -c ~/.config/tint2/Dark.tint2rc &
+elif [[ $Tint = Midday ]]; then
+	tint2 -c ~/.config/tint2/Light.tint2rc &
+fi
+
+}
+
+plank &
+sh ~/.fehbg &
+#picom --corner-radius 12 &
+picom &
+volumeicon &
+Lanucher_Tint2
+setxkbmap -model abnt2 -layout br -variant abnt2 &
+xrandr -s 1600x900 &
